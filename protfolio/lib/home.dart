@@ -12,6 +12,7 @@ class HomePage extends StatelessWidget {
         return Scaffold(
           appBar: AppBar(
             backgroundColor: Colors.white,
+            elevation: 2,
             actions: [
               IconButton(icon: Icon(Icons.share), onPressed: () {}),
             ],
@@ -19,10 +20,16 @@ class HomePage extends StatelessWidget {
           drawer: size.deviceScreenType == DeviceScreenType.mobile
               ? OpenDrawer()
               : null,
-          body: Container(
-            child: size.deviceScreenType != DeviceScreenType.mobile
-                ? DeskTopAndTabletDesign()
-                : MobileDesign(),
+          body: Column(
+            children: [
+              Expanded(
+                child: Container(
+                  child: size.deviceScreenType != DeviceScreenType.mobile
+                      ? DeskTopAndTabletDesign()
+                      : MobileDesign(),
+                ),
+              ),
+            ],
           ),
         );
       },
