@@ -10,23 +10,26 @@ class SocialMediaArea extends StatelessWidget {
           children: [
             Flexible(
               child: Container(
-                margin: EdgeInsets.only(left:20, right: 10),
-                height: 2,
+                margin: EdgeInsets.only(left: 45),
+                height: 1,
                 width: 200,
                 color: Colors.black,
               ),
             ),
             Flexible(
-              child: Text('Social Media',style: TextStyle(
-                fontSize: 19,
-                color: Colors.black,
-                fontWeight: FontWeight.normal,
-              ),),
+              child: Text(
+                'Social Media',
+                style: TextStyle(
+
+                  color: Colors.black,
+                  fontWeight: FontWeight.normal,
+                ),
+              ),
             ),
             Flexible(
               child: Container(
-                margin: EdgeInsets.only(left: 10, right: 20),
-                height: 2,
+                margin: EdgeInsets.only( right: 45),
+                height: 1,
                 width: 200,
                 color: Colors.black,
               ),
@@ -34,32 +37,44 @@ class SocialMediaArea extends StatelessWidget {
           ],
         ),
         Container(
-          margin: EdgeInsets.symmetric(vertical: 25,horizontal:40),
+          margin: EdgeInsets.symmetric(vertical: 25, horizontal: 50),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Flexible(
-                child: IconButton(
-                  icon: Icon(Icons.add),
+                child: FlatButton(
                   onPressed: () {},
+                  child: Image.asset(
+                    'images/facebook.png',
+                    fit: BoxFit.cover,
+                  ),
                 ),
               ),
               Flexible(
-                child: IconButton(
-                  icon: Icon(Icons.add),
+                child: FlatButton(
                   onPressed: () {},
+                  child: Image.asset(
+                    'images/twitter.png',
+                    fit: BoxFit.cover,
+                  ),
                 ),
               ),
               Flexible(
-                child: IconButton(
-                  icon: Icon(Icons.add),
+                child: FlatButton(
                   onPressed: () {},
+                  child: Image.asset(
+                    'images/github.png',
+                    fit: BoxFit.cover,
+                  ),
                 ),
               ),
               Flexible(
-                child: IconButton(
-                  icon: Icon(Icons.add),
+                child: FlatButton(
                   onPressed: () {},
+                  child: Image.asset(
+                    'images/linkedin.png',
+                    fit: BoxFit.cover,
+                  ),
                 ),
               ),
             ],

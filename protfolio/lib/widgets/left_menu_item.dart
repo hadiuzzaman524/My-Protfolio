@@ -12,7 +12,9 @@ class LeftMenuDesign extends StatelessWidget {
         child: Container(
           child: Column(
             children: [
-              SizedBox(height: 40,),
+              SizedBox(
+                height: 40,
+              ),
               CircleAvatar(
                 radius: 80,
                 backgroundImage: AssetImage('images/prof.JPG'),
@@ -24,6 +26,7 @@ class LeftMenuDesign extends StatelessWidget {
                 'Hadiuzzaman',
                 style: titleStyle,
               ),
+              Text('Mobile Application Developer'),
               SizedBox(
                 height: 30,
               ),
@@ -50,7 +53,7 @@ class LeftMenuDesign extends StatelessWidget {
               SizedBox(
                 height: 40,
               ),
-        SocialMediaArea(),
+              SocialMediaArea(),
             ],
           ),
         ),

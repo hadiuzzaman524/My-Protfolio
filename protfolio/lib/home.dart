@@ -11,6 +11,7 @@ class HomePage extends StatelessWidget {
       builder: (context, size) {
         return Scaffold(
           appBar: AppBar(
+            backgroundColor: Colors.white,
             actions: [
               IconButton(icon: Icon(Icons.share), onPressed: () {}),
             ],
