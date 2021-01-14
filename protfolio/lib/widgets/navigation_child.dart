@@ -3,17 +3,25 @@ import 'package:protfolio/constants.dart';
 import 'menubutton.dart';
 import 'social_media_area.dart';
 
-
 class NavigationChild extends StatelessWidget {
-  const NavigationChild({
-    Key key,
-  }) : super(key: key);
+  final Function aboutme;
+  final Function education;
+  final Function skills;
+  final Function project;
+  final Function contact;
+
+  NavigationChild(
+      {@required this.aboutme,
+      @required this.education,
+      @required this.skills,
+      @required this.contact,
+      @required this.project});
 
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Container(
-color: Colors.white,
+        color: Colors.white,
         child: Column(
           children: [
             SizedBox(
@@ -36,23 +44,23 @@ color: Colors.white,
             ),
             MenuButtonItem(
               name: 'About Me',
-              onclick: () {},
+              onclick: aboutme,
             ),
             MenuButtonItem(
               name: 'Educations',
-              onclick: () {},
+              onclick: education,
             ),
             MenuButtonItem(
-              name: 'My Skills',
-              onclick: () {},
+              name: 'Skill Set',
+              onclick:skills
             ),
             MenuButtonItem(
               name: 'Projects',
-              onclick: () {},
+              onclick: project
             ),
             MenuButtonItem(
-              name: 'Contact',
-              onclick: () {},
+              name: 'Contacts',
+              onclick: contact
             ),
             SizedBox(
               height: 40,

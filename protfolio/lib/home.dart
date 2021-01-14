@@ -4,7 +4,49 @@ import './widgets/drawer_layout.dart';
 import './widgets/mobile.dart';
 import './widgets/desktop.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  String temp;
+
+  _aboutMe() {
+    Navigator.pop(context);
+    setState(() {
+      temp = 'About Me';
+    });
+  }
+
+  _education() {
+    Navigator.pop(context);
+    setState(() {
+      temp = 'Educations';
+    });
+  }
+
+  _skill() {
+    Navigator.pop(context);
+    setState(() {
+      temp = 'Skill Set';
+    });
+  }
+
+  _project() {
+    Navigator.pop(context);
+    setState(() {
+      temp = 'Projects';
+    });
+  }
+
+  _contact() {
+    Navigator.pop(context);
+    setState(() {
+      temp = 'Contacts';
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return ResponsiveBuilder(
@@ -18,7 +60,13 @@ class HomePage extends StatelessWidget {
             ],
           ),
           drawer: size.deviceScreenType == DeviceScreenType.mobile
-              ? OpenDrawer()
+              ? OpenDrawer(
+                  education: _education,
+                  skills: _skill,
+                  project: _project,
+                  contact: _contact,
+                  aboutme: _aboutMe,
+                )
               : null,
           body: Column(
             children: [
@@ -26,7 +74,9 @@ class HomePage extends StatelessWidget {
                 child: Container(
                   child: size.deviceScreenType != DeviceScreenType.mobile
                       ? DeskTopAndTabletDesign()
-                      : MobileDesign(),
+                      : MobileDesign(
+                          temp: temp,
+                        ),
                 ),
               ),
             ],

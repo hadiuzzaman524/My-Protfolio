@@ -1,24 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:protfolio/constants.dart';
+import 'information_container.dart';
 
 class MainContainerDesign extends StatelessWidget {
+final String temp;
+MainContainerDesign({@required this.temp});
+
   @override
   Widget build(BuildContext context) {
+    print(temp);
     return Expanded(
       flex: 7,
-      child: Card(
-        elevation: 2,
-        child: Column(
-          children: [
-            Container(
-              padding: EdgeInsets.symmetric(horizontal: 20),
-              height: 80,
-              width: MediaQuery.of(context).size.width,
-             child: Text('About Me',style: titleStyle,),
-            ),
-          ],
-        ),
-      ),
+      child: InformationContainer(temp: temp),
     );
   }
 }
