@@ -2,12 +2,33 @@
 class Assets {
   Assets._();
 
+  static const String imagesAnd = 'images/and.png';
+  static const String imagesAndroid = 'images/android.png';
+  static const String imagesAndroidstudio = 'images/androidstudio.png';
+  static const String imagesCl64x64 = 'images/cl64x64.png';
+  static const String imagesCodeblocks = 'images/codeblocks.png';
   static const String imagesCp = 'images/cp.png';
+  static const String imagesCplus64x64 = 'images/cplus64x64.png';
+  static const String imagesCss64x64 = 'images/css64x64.png';
+  static const String imagesDart64x64 = 'images/dart64x64.png';
+  static const String imagesDev = 'images/dev.png';
   static const String imagesDownload = 'images/download.png';
   static const String imagesFacebook = 'images/facebook.png';
+  static const String imagesFltr = 'images/fltr.png';
+  static const String imagesFlutter = 'images/flutter.png';
+  static const String imagesGith = 'images/gith.png';
   static const String imagesGithub = 'images/github.png';
+  static const String imagesHtml64x64 = 'images/html64x64.png';
+  static const String imagesJava64x64 = 'images/java64x64.png';
   static const String imagesLinkedin = 'images/linkedin.png';
+  static const String imagesPhp64x64 = 'images/php64x64.png';
+  static const String imagesPowerpoint = 'images/powerpoint.jpg';
   static const String imagesProf = 'images/prof.JPG';
+  static const String imagesPython64x64 = 'images/python64x64.png';
+  static const String imagesTexstudio = 'images/texstudio.jpg';
   static const String imagesTwitter = 'images/twitter.png';
+  static const String imagesWdp = 'images/wdp.png';
+  static const String imagesWord = 'images/word.jpg';
+  static const String imagesXd = 'images/xd.png';
 
 }

@@ -7,8 +7,8 @@ const titleStyle = TextStyle(
 );
 const title2Style = TextStyle(
   color: Colors.black,
-  fontSize: 45,
-  fontWeight: FontWeight.bold,
+  fontSize: 30,
+  fontWeight: FontWeight.normal,
   fontStyle: FontStyle.italic,
 );
 

@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:protfolio/constants.dart';
+import 'package:protfolio/widgets/skills/framework_skills.dart';
+import 'package:protfolio/widgets/skills/language_skill.dart';
+import 'package:protfolio/widgets/skills/tools_and_tech.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'header_style.dart';
 import 'slill_item_card.dart';
+import 'freamwork_view.dart';
 
 class Skills extends StatelessWidget {
   @override
@@ -14,108 +18,31 @@ class Skills extends StatelessWidget {
             title: 'Language',
           ),
           SizedBox(
-            height: 10,
+            height: 20,
           ),
-          GridView.count(
-            crossAxisCount:
-                size.deviceScreenType == DeviceScreenType.mobile ? 2 : 3,
-            shrinkWrap: true,
-            mainAxisSpacing: 10,
-            crossAxisSpacing: 10,
-            childAspectRatio: 4 / 2,
-            children: [
-              SkillItemCard(
-                title: 'C',
-              ),
-              SkillItemCard(
-                title: 'C++',
-              ),
-              SkillItemCard(
-                title: 'Java',
-              ),
-              SkillItemCard(
-                title: 'HTML',
-              ),
-              SkillItemCard(
-                title: 'CSS',
-              ),
-              SkillItemCard(
-                title: 'PHP',
-              ),
-              SkillItemCard(
-                title: 'Python',
-              ),
-              SkillItemCard(
-                title: 'Dart',
-              ),
-            ],
+          LanguageSkill(),
+          SizedBox(
+            height: 40,
           ),
-          SizedBox(height: 10,),
           HeaderStyle(
             title: 'Frame Work',
           ),
-          SizedBox(height: 10,),
-          GridView.count(
-            crossAxisCount:
-            size.deviceScreenType == DeviceScreenType.mobile ? 2 : 3,
-            shrinkWrap: true,
-            mainAxisSpacing: 10,
-            crossAxisSpacing: 10,
-            childAspectRatio: 4 / 2,
-            children: [
-              SkillItemCard(
-                title: 'Android',
-              ),
-              SkillItemCard(
-                title: 'Flutter',
-              ),
-              SkillItemCard(
-                title: 'Word Press',
-              ),
-              SkillItemCard(
-                title: 'Java FX',
-              ),
-
-            ],
+          SizedBox(
+            height: 20,
           ),
-
+          FrameWorkSkills(),
+          SizedBox(
+            height: 40,
+          ),
           HeaderStyle(
             title: 'Tools and Technologies',
           ),
-          SizedBox(height: 10,),
-          GridView.count(
-            crossAxisCount:
-            size.deviceScreenType == DeviceScreenType.mobile ? 2 : 3,
-            shrinkWrap: true,
-            mainAxisSpacing: 10,
-            crossAxisSpacing: 10,
-            childAspectRatio: 4 / 2,
-            children: [
-              SkillItemCard(
-                title: 'CodeBlocks',
-              ),
-              SkillItemCard(
-                title: 'DEVC++',
-              ),
-              SkillItemCard(
-                title: 'Android Studio',
-              ),
-              SkillItemCard(
-                title: 'TexStudio',
-              ),
-              SkillItemCard(
-                title: 'Adobe XD',
-              ),
-              SkillItemCard(
-                title: 'Git',
-              ),
-              SkillItemCard(
-                title: 'MS Word',
-              ),
-              SkillItemCard(
-                title: 'MS PowerPoint',
-              ),
-            ],
+          SizedBox(
+            height:20,
+          ),
+          ToolsAndTechnology(),
+          SizedBox(
+            height: 40,
           ),
         ],
       );
