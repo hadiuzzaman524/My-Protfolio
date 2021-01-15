@@ -35,7 +35,6 @@ class InformationContainer extends StatelessWidget {
           if (temp != null)
             SingleChildScrollView(
               child: Container(
-                color: Colors.green,
                 height: MediaQuery.of(context).size.height-(55+64),
                 width: MediaQuery.of(context).size.width,
                 child: temp.contains('About Me')
