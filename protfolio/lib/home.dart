@@ -49,7 +49,6 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-
     return ResponsiveBuilder(
       builder: (context, size) {
         return Scaffold(
