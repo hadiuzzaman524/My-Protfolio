@@ -17,13 +17,14 @@ class InformationContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    return Card(
-      elevation: 2,
+    return Container(
+     // elevation: 2,
       child: Column(
         children: [
           Container(
             padding: EdgeInsets.symmetric(horizontal: 20),
             height: 55,
+            color: Colors.white,
             width: MediaQuery.of(context).size.width,
             child: temp != null
                 ? Text(
@@ -35,6 +36,7 @@ class InformationContainer extends StatelessWidget {
           if (temp != null)
             SingleChildScrollView(
               child: Container(
+                color: Colors.white,
                 height: MediaQuery.of(context).size.height-(55+64),
                 width: MediaQuery.of(context).size.width,
                 child: temp.contains('About Me')

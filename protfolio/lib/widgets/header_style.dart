@@ -19,7 +19,7 @@ class HeaderStyle extends StatelessWidget {
             title,
             style: titleStyle,
           )),
-      color: Color(0xffededed),
+      color: Color(0xffd8ebfa),
     );
   }
 }

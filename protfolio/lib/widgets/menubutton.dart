@@ -17,9 +17,10 @@ class MenuButtonItem extends StatelessWidget {
         onPressed: onclick,
         child: Container(
           height: 35,
+          padding: EdgeInsets.symmetric(vertical: 5),
           width: MediaQuery.of(context).size.width,
           child: Center(
-            child: Text(name),
+            child: Text(name,style: TextStyle(color: Colors.white,fontSize: 17),),
           ),
         ),
       ),
