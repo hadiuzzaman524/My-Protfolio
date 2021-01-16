@@ -3,9 +3,24 @@ import 'package:protfolio/widgets/project_style/project_bottombar.dart';
 import 'package:protfolio/widgets/project_style/project_topbar.dart';
 
 class ProjectCard extends StatelessWidget {
+  final String title;
+  final String gitHubLink;
+  final String playStoreLink;
+  final String appLogo;
+  final String description;
+  final String technology;
+
+  ProjectCard(
+      {@required this.title,
+      @required this.gitHubLink,
+      @required this.appLogo,
+      @required this.description,
+      @required this.technology,
+      @required this.playStoreLink});
+
   @override
   Widget build(BuildContext context) {
-    return   Container(
+    return Container(
       margin: EdgeInsets.all(8),
       child: Card(
         elevation: 6,
@@ -14,9 +29,9 @@ class ProjectCard extends StatelessWidget {
           children: [
             Expanded(
               child: ProjectTopBar(
-                title: 'eTutor',
-                gitHubLink: '',
-                playStoreLink: 'hello',
+                title: title,
+                gitHubLink: gitHubLink,
+                playStoreLink: playStoreLink,
               ),
               flex: 2,
             ),
@@ -28,7 +43,7 @@ class ProjectCard extends StatelessWidget {
                       flex: 2,
                       child: Container(
                         height: MediaQuery.of(context).size.height,
-                        child: Image.asset('images/html64x64.png'),
+                        child: Image.asset(appLogo),
                         // width: 200,
                       ),
                     ),
@@ -39,7 +54,7 @@ class ProjectCard extends StatelessWidget {
                         padding: EdgeInsets.all(15),
                         child: SingleChildScrollView(
                           child: Text(
-                            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
+                            description,
                             style: TextStyle(
                               fontSize: 17,
                             ),
@@ -57,7 +72,7 @@ class ProjectCard extends StatelessWidget {
             ),
             Expanded(
               child: ProjectBottomBar(
-                language: 'Android',
+                language: technology,
               ),
               flex: 2,
             ),

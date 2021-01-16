@@ -11,7 +11,7 @@ class ProjectTopBar extends StatelessWidget {
   const ProjectTopBar({
     @required this.title,
     @required this.gitHubLink,
-    this.playStoreLink,
+    @required this.playStoreLink,
     Key key,
   }) : super(key: key);
 
@@ -33,10 +33,10 @@ class ProjectTopBar extends StatelessWidget {
               position: DiagonalPosition.TOP_RIGHT,
               child: Container(
                 color: Theme.of(context).primaryColor,
-                width: 180,
+                width:220,
                 child: Center(
                   child: Text(
-                    'BMI Calculator',
+                    title,
                     style: projectTitle,
                   ),
                 ),
@@ -47,12 +47,13 @@ class ProjectTopBar extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                InkWell(
-                  child: Image.asset('images/git24.png'),
-                  onTap: () {
-                    _openWithGitHub(gitHubLink);
-                  },
-                ),
+                if (gitHubLink != null)
+                  InkWell(
+                    child: Image.asset('images/git24.png'),
+                    onTap: () {
+                      _openWithGitHub(gitHubLink);
+                    },
+                  ),
                 SizedBox(
                   width: 20,
                 ),
@@ -63,7 +64,7 @@ class ProjectTopBar extends StatelessWidget {
                         _openWithPlayStore(playStoreLink);
                       }),
                 SizedBox(
-                  width: 10,
+                  width:gitHubLink==null?42:10,
                 ),
               ],
             ),

@@ -21,7 +21,7 @@ class ProjectBottomBar extends StatelessWidget {
             position: DiagonalPosition.BOTTOM_LEFT,
             child: Container(
               color: Theme.of(context).primaryColor,
-              width: 100.0,
+              width: 150,
               height: MediaQuery.of(context).size.height,
               child: Center(
                 child: Text(
