@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primaryColor: Color(0xff28b8f6),//0xff00589d
-        accentColor: Color(0xff00589d),
+        accentColor: Color(0xffd8ebfa),
        primaryIconTheme: IconThemeData.fallback().copyWith(
          color: Colors.white,
        ),

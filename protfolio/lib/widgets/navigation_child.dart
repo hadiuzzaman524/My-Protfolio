@@ -21,7 +21,7 @@ class NavigationChild extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Container(
-        color: Colors.white,
+        color: Theme.of(context).accentColor,
         child: Column(
           children: [
             SizedBox(

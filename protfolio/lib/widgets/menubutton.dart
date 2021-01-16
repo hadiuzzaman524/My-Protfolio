@@ -16,7 +16,7 @@ class MenuButtonItem extends StatelessWidget {
       child: FlatButton(
         onPressed: onclick,
         child: Container(
-          height: 35,
+          height: 40,
           padding: EdgeInsets.symmetric(vertical: 5),
           width: MediaQuery.of(context).size.width,
           child: Center(

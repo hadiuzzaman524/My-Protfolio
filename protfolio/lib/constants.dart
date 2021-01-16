@@ -11,4 +11,10 @@ const title2Style = TextStyle(
   fontWeight: FontWeight.normal,
   fontStyle: FontStyle.italic,
 );
+const projectTitle = TextStyle(
+  color: Colors.white,
+  fontSize: 20,
+  fontWeight: FontWeight.bold,
+  fontStyle: FontStyle.italic,
+);
 

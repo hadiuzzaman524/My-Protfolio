@@ -13,7 +13,7 @@ class FreamWorkView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       margin: EdgeInsets.all(10),
-      color: Color(0xffd8ebfa),//#bdd1e0 0xffbaddf8
+      color: Theme.of(context).accentColor,//#bdd1e0 0xffbaddf8
       elevation:8,
       child: Column(
         children: [
