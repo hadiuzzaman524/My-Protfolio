@@ -15,6 +15,10 @@ class ProjectTopBar extends StatelessWidget {
     Key key,
   }) : super(key: key);
 
+  _openWithPlayStore(String url) {}
+
+  _openWithGitHub(String url) {}
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -45,18 +49,19 @@ class ProjectTopBar extends StatelessWidget {
               children: [
                 InkWell(
                   child: Image.asset('images/git24.png'),
-                  onTap: () {},
+                  onTap: () {
+                    _openWithGitHub(gitHubLink);
+                  },
                 ),
                 SizedBox(
                   width: 20,
                 ),
                 if (playStoreLink != null)
                   InkWell(
-                    child: Image.asset('images/play.png'),
-                    onTap: () {
-
-                    },
-                  ),
+                      child: Image.asset('images/play.png'),
+                      onTap: () {
+                        _openWithPlayStore(playStoreLink);
+                      }),
                 SizedBox(
                   width: 10,
                 ),
