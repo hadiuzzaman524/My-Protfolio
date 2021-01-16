@@ -20,12 +20,15 @@ class Assets {
   static const String imagesFirebase64x64 = 'images/firebase64x64.png';
   static const String imagesFltr = 'images/fltr.png';
   static const String imagesFlutter = 'images/flutter.png';
+  static const String imagesGit24 = 'images/git24.png';
   static const String imagesGith = 'images/gith.png';
   static const String imagesGithub = 'images/github.png';
   static const String imagesHtml64x64 = 'images/html64x64.png';
   static const String imagesJava64x64 = 'images/java64x64.png';
   static const String imagesLinkedin = 'images/linkedin.png';
   static const String imagesPhp64x64 = 'images/php64x64.png';
+  static const String imagesPlay = 'images/play.png';
+  static const String imagesPlaystore24 = 'images/playstore24.png';
   static const String imagesPowerpoint = 'images/powerpoint.jpg';
   static const String imagesProblemsolving = 'images/problemsolving.png';
   static const String imagesProf = 'images/prof.JPG';

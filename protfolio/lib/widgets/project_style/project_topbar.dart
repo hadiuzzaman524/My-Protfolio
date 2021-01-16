@@ -5,7 +5,7 @@ import '../../constants.dart';
 
 class ProjectTopBar extends StatelessWidget {
   final String title;
-  final String playStoreLink;
+  final playStoreLink;
   final String gitHubLink;
 
   const ProjectTopBar({
@@ -29,10 +29,10 @@ class ProjectTopBar extends StatelessWidget {
               position: DiagonalPosition.TOP_RIGHT,
               child: Container(
                 color: Theme.of(context).primaryColor,
-                width: 135,
+                width: 180,
                 child: Center(
                   child: Text(
-                    'BAUST QB',
+                    'BMI Calculator',
                     style: projectTitle,
                   ),
                 ),
@@ -43,17 +43,20 @@ class ProjectTopBar extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Icon(
-                  Icons.add,
-                  size: 24,
+                InkWell(
+                  child: Image.asset('images/git24.png'),
+                  onTap: () {},
                 ),
                 SizedBox(
                   width: 20,
                 ),
-                Icon(
-                  Icons.ac_unit_sharp,
-                  size: 24,
-                ),
+                if (playStoreLink != null)
+                  InkWell(
+                    child: Image.asset('images/play.png'),
+                    onTap: () {
+
+                    },
+                  ),
                 SizedBox(
                   width: 10,
                 ),

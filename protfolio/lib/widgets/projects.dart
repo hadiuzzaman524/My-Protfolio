@@ -30,6 +30,7 @@ class Projects extends StatelessWidget {
                       child: ProjectTopBar(
                         title: 'eTutor',
                         gitHubLink: '',
+                        playStoreLink: 'hello',
                       ),
                       flex: 2,
                     ),
@@ -60,7 +61,7 @@ class Projects extends StatelessWidget {
                                     'Java',
                                     style: TextStyle(
                                       color: Colors.white,
-                                      fontSize: 17,
+                                      fontSize: 18,
                                       fontWeight: FontWeight.normal,
                                     ),
                                   ),
