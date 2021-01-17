@@ -10,7 +10,8 @@ class Educations extends StatelessWidget {
     return ResponsiveBuilder(
       builder: (context, size) {
         return GridView.count(
-          childAspectRatio: 4 / 2,
+          childAspectRatio:
+              size.deviceScreenType == DeviceScreenType.desktop ? 5 / 3 : 4 / 2,
           shrinkWrap: true,
           mainAxisSpacing: 6,
           crossAxisSpacing: 6,
@@ -18,44 +19,45 @@ class Educations extends StatelessWidget {
               size.deviceScreenType != DeviceScreenType.desktop ? 1 : 2,
           children: [
             EducationCard(
-              title: 'dkfd',
-              institute: 'dfd',
+              title: 'Bachelor Of Science in Engineering.',
+              institute:
+                  'Bangladesh Army University of Science & Technology, Saidpur.',
               board: null,
-              gpa: 'dfd',
+              gpa: '3.74 Out of 4.0',
               imageUrl: 'images/baust80x80.png',
-              passingYear: '2021',
+              passingYear: ' Continious(3rd year)',
               isUniversity: true,
-              shortFromofDegree: 'B.sc',
+              shortFromofDegree: 'B.Sc',
             ),
             EducationCard(
-              title: '',
-              institute: '',
-              board: null,
-              gpa: '',
-              imageUrl: '',
-              passingYear: '',
-              isUniversity: true,
-              shortFromofDegree: '',
+              title: 'Higher Secondary Certificate',
+              institute: 'Cantonment Public School & College, Rangpur.',
+              board: 'Dinajpur',
+              gpa: '5.0 Out of 5.0',
+              imageUrl: 'images/cpscr.png',
+              passingYear: '2017',
+              isUniversity: false,
+              shortFromofDegree: 'H.S.C',
             ),
             EducationCard(
-              title: '',
-              institute: '',
-              board: null,
-              gpa: '',
-              imageUrl: '',
-              passingYear: '',
-              isUniversity: true,
-              shortFromofDegree: '',
+              title: 'Secondary School Certificate',
+              institute: 'Bir Uttam Shaheed Samad School & College, Rangpur.',
+              board: 'Dinajpur',
+              gpa: '5.0 Out of 5.0',
+              imageUrl: 'images/busshr.png',
+              passingYear: '2015',
+              isUniversity: false,
+              shortFromofDegree: 'S.S.C',
             ),
             EducationCard(
-              title: '',
-              institute: '',
-              board: null,
-              gpa: '',
-              imageUrl: '',
-              passingYear: '',
-              isUniversity: true,
-              shortFromofDegree: '',
+              title: 'Junior School Certificate',
+              institute: 'Bir Uttam Shaheed Samad School & College, Rangpur.',
+              board: 'Dinajpur',
+              gpa: '5.0 Out of 5.0',
+              imageUrl: 'images/busshr.png',
+              passingYear: '2012',
+              isUniversity: false,
+              shortFromofDegree: 'J.S.C',
             ),
           ],
         );
@@ -94,9 +96,6 @@ class EducationCard extends StatelessWidget {
       color: Theme.of(context).accentColor,
       child: Column(
         children: [
-          SizedBox(
-            height: 5,
-          ),
           Expanded(
             child: Container(
               child: Row(
@@ -108,7 +107,7 @@ class EducationCard extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           SizedBox(
-                            height: 5,
+                            height: 20,
                           ),
                           Image.asset(imageUrl),
                         ],
@@ -117,74 +116,76 @@ class EducationCard extends StatelessWidget {
                   ),
                   Expanded(
                     flex: 5,
-                    child: Container(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            title,
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 21,
-                              color: Colors.black,
+                    child: SingleChildScrollView(
+                      child: Container(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              title,
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 21,
+                                color: Colors.black,
+                              ),
                             ),
-                          ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Text(
-                            institute,
-                            style: TextStyle(
-                              fontWeight: FontWeight.w500,
-                              fontSize: 18,
-                              color: Colors.black,
+                            SizedBox(
+                              height: 10,
                             ),
-                          ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Text(
-                            'Passing Year: {$passingYear}',
-                            style: TextStyle(
-                              fontWeight: FontWeight.w500,
-                              fontSize: 17,
-                              color: Colors.black,
+                            Text(
+                              institute,
+                              style: TextStyle(
+                                fontWeight: FontWeight.w500,
+                                fontSize: 18,
+                                color: Colors.black,
+                              ),
                             ),
-                          ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          isUniversity
-                              ? Text(
-                                  'C.G.P.A: {$gpa}',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.w500,
-                                    fontSize: 17,
-                                    color: Colors.black,
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Text(
+                              'Passing Year: $passingYear',
+                              style: TextStyle(
+                                fontWeight: FontWeight.w500,
+                                fontSize: 17,
+                                color: Colors.black,
+                              ),
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            isUniversity
+                                ? Text(
+                                    'C.G.P.A: $gpa',
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: 17,
+                                      color: Colors.black,
+                                    ),
+                                  )
+                                : Text(
+                                    'G.P.A: $gpa',
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: 17,
+                                      color: Colors.black,
+                                    ),
                                   ),
-                                )
-                              : Text(
-                                  'G.P.A: {$gpa}',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.w500,
-                                    fontSize: 17,
-                                    color: Colors.black,
-                                  ),
-                                ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          board != null
-                              ? Text(
-                                  'Board: {$board}',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.w500,
-                                    fontSize: 17,
-                                    color: Colors.black,
-                                  ),
-                                )
-                              : Text(''),
-                        ],
+                            SizedBox(
+                              height: 10,
+                            ),
+                            board != null
+                                ? Text(
+                                    'Board: $board',
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: 17,
+                                      color: Colors.black,
+                                    ),
+                                  )
+                                : Text(''),
+                          ],
+                        ),
                       ),
                     ),
                   ),
