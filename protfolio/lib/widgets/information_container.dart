@@ -29,7 +29,7 @@ class InformationContainer extends StatelessWidget {
             child: temp != null
                 ? Text(
                     temp,
-                    style: titleStyle,
+                    style: headerTextStyle,
                   )
                 : Text(''),
           ),

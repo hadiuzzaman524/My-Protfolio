@@ -16,6 +16,7 @@ class Assets {
   static const String imagesDev = 'images/dev.png';
   static const String imagesDownload = 'images/download.png';
   static const String imagesDs = 'images/ds.jpg';
+  static const String imagesEtutor64x64 = 'images/etutor64x64.jpg';
   static const String imagesFacebook = 'images/facebook.png';
   static const String imagesFirebase64x64 = 'images/firebase64x64.png';
   static const String imagesFltr = 'images/fltr.png';

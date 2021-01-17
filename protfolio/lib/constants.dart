@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
+const headerTextStyle=TextStyle(
+  fontSize: 26,
+  fontWeight: FontWeight.bold,
+  color: Colors.black,
+);
 
 const titleStyle = TextStyle(
-  color: Colors.black,
   fontSize: 25,
   fontWeight: FontWeight.bold,
+  color: Colors.black,
+  fontStyle: FontStyle.italic,
 );
 const title2Style = TextStyle(
   color: Colors.black,
@@ -15,6 +21,12 @@ const projectTitle = TextStyle(
   color: Colors.white,
   fontSize: 20,
   fontWeight: FontWeight.bold,
+  fontStyle: FontStyle.italic,
+);
+
+const normalTextStyle=TextStyle(
+  fontSize: 20,
+  color: Colors.black,
   fontStyle: FontStyle.italic,
 );
 

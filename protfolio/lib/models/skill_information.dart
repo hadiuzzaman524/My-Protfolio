@@ -22,7 +22,7 @@ class SkillInformation {
     Project(
         title: 'eTutor',
         gitHubLink: null,
-        appLogo: 'images/androidstudio.png',
+        appLogo: 'images/and.png',
         description:
             """This app is mainly for students and teachers who are seeking private tuition or interested to provide. Here, students can find suitable teachers with their expected salary and teachers can find students who are interested in private tuition.
 
