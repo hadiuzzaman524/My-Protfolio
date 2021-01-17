@@ -7,6 +7,7 @@ class Assets {
   static const String imagesAnd = 'images/and.png';
   static const String imagesAndroid = 'images/android.png';
   static const String imagesAndroidstudio = 'images/androidstudio.png';
+  static const String imagesBaust80x80 = 'images/baust80x80.png';
   static const String imagesCl64x64 = 'images/cl64x64.png';
   static const String imagesCodeblocks = 'images/codeblocks.png';
   static const String imagesCp = 'images/cp.png';
