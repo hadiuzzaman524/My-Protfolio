@@ -26,7 +26,11 @@ class MenuButtonItem extends StatelessWidget {
             child: Center(
               child: Text(
                 name,
-                style: TextStyle(color: Colors.white, fontSize: 17),
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 17,
+                  fontStyle: FontStyle.italic,
+                ),
               ),
             ),
           ),
