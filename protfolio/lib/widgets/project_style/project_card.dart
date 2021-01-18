@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:protfolio/constants.dart';
 import 'package:protfolio/widgets/project_style/project_bottombar.dart';
 import 'package:protfolio/widgets/project_style/project_topbar.dart';
 
@@ -55,9 +56,7 @@ class ProjectCard extends StatelessWidget {
                         child: SingleChildScrollView(
                           child: Text(
                             description,
-                            style: TextStyle(
-                              fontSize: 17,
-                            ),
+                            style: normalTextStyle,
                             textAlign: TextAlign.justify,
                             overflow: TextOverflow.visible,
                           ),

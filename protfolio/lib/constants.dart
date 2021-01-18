@@ -25,7 +25,7 @@ const projectTitle = TextStyle(
 );
 
 const normalTextStyle=TextStyle(
-  fontSize: 20,
+  fontSize: 17,
   color: Colors.black,
   fontStyle: FontStyle.italic,
 );

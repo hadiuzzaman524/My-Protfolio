@@ -1,5 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:protfolio/constants.dart';
+import 'package:protfolio/widgets/header_style.dart';
 import 'about_me.dart';
 import 'skills.dart';
 import 'educations.dart';
@@ -16,9 +18,8 @@ class InformationContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return Container(
-     // elevation: 2,
+      // elevation: 2,
       child: Column(
         children: [
           Container(
@@ -28,16 +29,19 @@ class InformationContainer extends StatelessWidget {
             width: MediaQuery.of(context).size.width,
             child: temp != null
                 ? Text(
-                    temp,
+                    temp.toUpperCase(),
                     style: headerTextStyle,
                   )
-                : Text(''),
+                : Text(
+                    'About Me'.toUpperCase(),
+                    style: headerTextStyle,
+                  ),
           ),
           if (temp != null)
             SingleChildScrollView(
               child: Container(
                 color: Colors.white,
-                height: MediaQuery.of(context).size.height-(55+64),
+                height: MediaQuery.of(context).size.height - (55 + 64),
                 width: MediaQuery.of(context).size.width,
                 child: temp.contains('About Me')
                     ? AboutMe()
@@ -49,11 +53,19 @@ class InformationContainer extends StatelessWidget {
                                 ? Projects()
                                 : temp.contains('Contact')
                                     ? Contacts()
-                                    : Container(), //default design
+                                    : AboutMe(), //default design
               ),
             )
           else
-            Container() // default design
+            SingleChildScrollView(
+              child: Container(
+                color: Colors.white,
+                height: MediaQuery.of(context).size.height - (55 + 64),
+                width: MediaQuery.of(context).size.width,
+                child: AboutMe(),
+              ),
+            ),
+          // default design
         ],
       ),
     );

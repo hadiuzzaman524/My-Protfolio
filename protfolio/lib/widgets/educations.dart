@@ -137,6 +137,7 @@ class EducationCard extends StatelessWidget {
                               style: TextStyle(
                                 fontWeight: FontWeight.w500,
                                 fontSize: 18,
+                                fontStyle: FontStyle.italic,
                                 color: Colors.black,
                               ),
                             ),
@@ -144,10 +145,11 @@ class EducationCard extends StatelessWidget {
                               height: 10,
                             ),
                             Text(
-                              'Passing Year: $passingYear',
+                              'Passing Year:  $passingYear',
                               style: TextStyle(
                                 fontWeight: FontWeight.w500,
                                 fontSize: 17,
+                                fontStyle: FontStyle.italic,
                                 color: Colors.black,
                               ),
                             ),
@@ -156,19 +158,21 @@ class EducationCard extends StatelessWidget {
                             ),
                             isUniversity
                                 ? Text(
-                                    'C.G.P.A: $gpa',
+                                    'C.G.P.A:  $gpa',
                                     style: TextStyle(
                                       fontWeight: FontWeight.w500,
                                       fontSize: 17,
+                                      fontStyle: FontStyle.italic,
                                       color: Colors.black,
                                     ),
                                   )
                                 : Text(
-                                    'G.P.A: $gpa',
+                                    'G.P.A:  $gpa',
                                     style: TextStyle(
                                       fontWeight: FontWeight.w500,
                                       fontSize: 17,
                                       color: Colors.black,
+                                      fontStyle: FontStyle.italic,
                                     ),
                                   ),
                             SizedBox(
@@ -176,7 +180,7 @@ class EducationCard extends StatelessWidget {
                             ),
                             board != null
                                 ? Text(
-                                    'Board: $board',
+                                    'Board:  $board',
                                     style: TextStyle(
                                       fontWeight: FontWeight.w500,
                                       fontSize: 17,

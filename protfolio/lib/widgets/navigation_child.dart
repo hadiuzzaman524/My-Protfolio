@@ -35,10 +35,13 @@ class NavigationChild extends StatelessWidget {
               height: 20,
             ),
             Text(
-              'Hadiuzzaman',
+              'Md Hadiuzzaman',
               style: titleStyle,
             ),
-            Text('Mobile Application Developer'),
+            Text(
+              'Mobile Application Developer & Problem Solver',
+              style:normalTextStyle,
+            ),
             SizedBox(
               height: 30,
             ),
@@ -50,18 +53,9 @@ class NavigationChild extends StatelessWidget {
               name: 'Educations',
               onclick: education,
             ),
-            MenuButtonItem(
-              name: 'Skill Set',
-              onclick:skills
-            ),
-            MenuButtonItem(
-              name: 'Projects',
-              onclick: project
-            ),
-            MenuButtonItem(
-              name: 'Contacts',
-              onclick: contact
-            ),
+            MenuButtonItem(name: 'Skill Set', onclick: skills),
+            MenuButtonItem(name: 'Projects', onclick: project),
+            MenuButtonItem(name: 'Contacts', onclick: contact),
             SizedBox(
               height: 40,
             ),

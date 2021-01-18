@@ -12,11 +12,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primaryColor: Color(0xff28b8f6),//0xff00589d
-        accentColor:Colors.white, //Color(0xffededed), //0xffd8ebfa
-       primaryIconTheme: IconThemeData.fallback().copyWith(
-         color: Colors.white,
-       ),
+        primaryColor: Color(0xff28b8f6), //0xff00589d
+        accentColor: Colors.white, //Color(0xffededed), //0xffd8ebfa
+        primaryIconTheme: IconThemeData.fallback().copyWith(
+          color: Colors.white,
+        ),
       ),
       home: HomePage(),
     );

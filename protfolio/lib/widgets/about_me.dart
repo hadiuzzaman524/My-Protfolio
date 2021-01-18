@@ -1,4 +1,5 @@
 import 'package:clippy_flutter/diagonal.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../constants.dart';
@@ -28,26 +29,30 @@ class AboutMe extends StatelessWidget {
             ),
             Text(
               'Mobile Application Developer & Problem solver',
-              style: TextStyle(
-                fontSize: 20,
-                color: Colors.black,
-                fontStyle: FontStyle.italic,
-              ),
+              style: normalTextStyle,
             ),
             SizedBox(
               height: 10,
             ),
-            Text(
-              'Student at Bangladesh Army University of Science and Technology.\nNilphamari, Saidpur.',
-              style: TextStyle(
-                fontSize: 22,
-                color: Colors.black,
-                fontWeight: FontWeight.w500,
-                fontStyle: FontStyle.italic,
-              ),
+            Row(
+              children: [
+                Image.asset('images/baust64.png'),
+                SizedBox(width: 5,),
+                Expanded(
+                  child: Text(
+                    'Student at Bangladesh Army University of Science and Technology.\nNilphamari, Saidpur.',
+                    style: TextStyle(
+                      fontSize: 22,
+                      color: Colors.black,
+                      fontWeight: FontWeight.w500,
+                      fontStyle: FontStyle.italic,
+                    ),
+                  ),
+                ),
+              ],
             ),
             SizedBox(
-              height: 20,
+              height: 50,
             ),
             Diagonal(
               clipHeight: 20.0,
