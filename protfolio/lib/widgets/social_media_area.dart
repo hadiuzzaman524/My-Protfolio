@@ -1,7 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:protfolio/constants.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class SocialMediaArea extends StatelessWidget {
+  Future<void> _openUrl(String url) async {
+    if (await canLaunch(url)) {
+      await launch(
+        url,
+        forceSafariVC: false,
+        forceWebView: false,
+        //headers: <String, String>{'my_header_key': 'my_header_value'},
+      );
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -41,7 +55,9 @@ class SocialMediaArea extends StatelessWidget {
               Flexible(
                 child: InkWell(
                   splashColor: Theme.of(context).primaryColor,
-                  onTap: () {},
+                  onTap: () {
+                    _openUrl('https://www.facebook.com/jibon.hadiuzzaman/').catchError((error) => print(error));
+                  },
                   child: Image.asset(
                     'images/facebook.png',
                     fit: BoxFit.cover,
@@ -51,7 +67,9 @@ class SocialMediaArea extends StatelessWidget {
               Flexible(
                 child: InkWell(
                   splashColor: Theme.of(context).primaryColor,
-                  onTap: () {},
+                  onTap: () {
+                    //_openUrl('').catchError((error) => print(error));
+                  },
                   child: Image.asset(
                     'images/twitter.png',
                     fit: BoxFit.cover,
@@ -61,7 +79,9 @@ class SocialMediaArea extends StatelessWidget {
               Flexible(
                 child: InkWell(
                   splashColor: Theme.of(context).primaryColor,
-                  onTap: () {},
+                  onTap: () {
+                    _openUrl('https://github.com/hadiuzzaman524').catchError((error) => print(error));
+                  },
                   child: Image.asset(
                     'images/github.png',
                     fit: BoxFit.cover,
@@ -71,7 +91,9 @@ class SocialMediaArea extends StatelessWidget {
               Flexible(
                 child: InkWell(
                   splashColor: Theme.of(context).primaryColor,
-                  onTap: () {},
+                  onTap: () {
+                    _openUrl('https://www.linkedin.com/in/md-hadiuzzaman-72613a1a3').catchError((error) => print(error));
+                  },
                   child: Image.asset(
                     'images/linkedin.png',
                     fit: BoxFit.cover,

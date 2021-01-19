@@ -1,5 +1,6 @@
 import 'package:clippy_flutter/diagonal.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../constants.dart';
 
@@ -15,9 +16,31 @@ class ProjectTopBar extends StatelessWidget {
     Key key,
   }) : super(key: key);
 
-  _openWithPlayStore(String url) {}
+  Future<void> _openWithPlayStore(String url) async {
+    if (await canLaunch(url)) {
+      await launch(
+        url,
+        forceSafariVC: false,
+        forceWebView: false,
+        headers: <String, String>{'my_header_key': 'my_header_value'},
+      );
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
 
-  _openWithGitHub(String url) {}
+  Future<void> _openWithGitHub(String url) async {
+    if (await canLaunch(url)) {
+      await launch(
+        url,
+        forceSafariVC: false,
+        forceWebView: false,
+        //headers: <String, String>{'my_header_key': 'my_header_value'},
+      );
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +56,7 @@ class ProjectTopBar extends StatelessWidget {
               position: DiagonalPosition.TOP_RIGHT,
               child: Container(
                 color: Theme.of(context).primaryColor,
-                width:220,
+                width: 220,
                 child: Center(
                   child: Text(
                     title,
@@ -51,7 +74,8 @@ class ProjectTopBar extends StatelessWidget {
                   InkWell(
                     child: Image.asset('images/git24.png'),
                     onTap: () {
-                      _openWithGitHub(gitHubLink);
+                      _openWithGitHub(gitHubLink)
+                          .catchError((error) => print(error));
                     },
                   ),
                 SizedBox(
@@ -61,10 +85,11 @@ class ProjectTopBar extends StatelessWidget {
                   InkWell(
                       child: Image.asset('images/play.png'),
                       onTap: () {
-                        _openWithPlayStore(playStoreLink);
+                        _openWithPlayStore(playStoreLink)
+                            .catchError((error) => print(error));
                       }),
                 SizedBox(
-                  width:gitHubLink==null?42:10,
+                  width: gitHubLink == null ? 42 : 10,
                 ),
               ],
             ),

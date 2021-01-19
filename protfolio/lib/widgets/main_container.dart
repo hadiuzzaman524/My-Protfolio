@@ -8,7 +8,6 @@ MainContainerDesign({@required this.temp});
 
   @override
   Widget build(BuildContext context) {
-    print(temp);
     return Expanded(
       flex: 7,
       child: InformationContainer(temp: temp),

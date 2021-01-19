@@ -3,8 +3,30 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:protfolio/constants.dart';
 import 'package:responsive_builder/responsive_builder.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Contacts extends StatelessWidget {
+  Future<void> _openUrl(String url) async {
+    if (await canLaunch(url)) {
+      await launch(
+        url,
+        forceSafariVC: false,
+        forceWebView: false,
+        //headers: <String, String>{'my_header_key': 'my_header_value'},
+      );
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+
+  Future<void> _makePhoneCall(String url) async {
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -64,7 +86,14 @@ class Contacts extends StatelessWidget {
                           'hadiuzzaman.cse.bd@gmail.com',
                           style: normalTextStyle,
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          final Uri _emailLaunchUri = Uri(
+                              scheme: 'mailto',
+                              path: 'hadiuzzaman.cse.bd@gmail.com',
+                              queryParameters: {'subject': ''});
+                          _openUrl(_emailLaunchUri.toString())
+                              .catchError((onError) => print(onError));
+                        },
                       ),
                     ],
                   ),
@@ -76,7 +105,14 @@ class Contacts extends StatelessWidget {
                           '+880 1785304677',
                           style: normalTextStyle,
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          final Uri _emailLaunchUri = Uri(
+                            scheme: 'tel',
+                            path: '01785304677',
+                          );
+                          _openUrl(_emailLaunchUri.toString())
+                              .catchError((onError) => print(onError));
+                        },
                       ),
                     ],
                   ),
@@ -85,10 +121,14 @@ class Contacts extends StatelessWidget {
                       Image.asset('images/facebook.png'),
                       FlatButton(
                         child: Text(
-                          'Follow Me',
+                          'Visit My Profile',
                           style: normalTextStyle,
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          _openUrl(
+                                  'https://www.facebook.com/jibon.hadiuzzaman/')
+                              .catchError((error) => print(error));
+                        },
                       ),
                     ],
                   ),
@@ -100,7 +140,11 @@ class Contacts extends StatelessWidget {
                           'Visit My Profile',
                           style: normalTextStyle,
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          _openUrl(
+                                  'https://www.linkedin.com/in/md-hadiuzzaman-72613a1a3')
+                              .catchError((error) => print(error));
+                        },
                       ),
                     ],
                   ),
@@ -109,10 +153,12 @@ class Contacts extends StatelessWidget {
                       Image.asset('images/twitter.png'),
                       FlatButton(
                         child: Text(
-                          'Follow Me',
+                          'Visit My Profile',
                           style: normalTextStyle,
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          //_openUrl('').catchError((error) => print(error));
+                        },
                       ),
                     ],
                   ),
@@ -121,10 +167,13 @@ class Contacts extends StatelessWidget {
                       Image.asset('images/github.png'),
                       FlatButton(
                         child: Text(
-                          'Follow Me',
+                          'Visit My Profile',
                           style: normalTextStyle,
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          _openUrl('https://github.com/hadiuzzaman524')
+                              .catchError((error) => print(error));
+                        },
                       ),
                     ],
                   ),
