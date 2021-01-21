@@ -3,6 +3,7 @@ import 'package:responsive_builder/responsive_builder.dart';
 import './widgets/drawer_layout.dart';
 import './widgets/mobile.dart';
 import './widgets/desktop.dart';
+import 'package:share/share.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -56,7 +57,9 @@ class _HomePageState extends State<HomePage> {
             backgroundColor: Theme.of(context).primaryColor,
             elevation: 2,
             actions: [
-              IconButton(icon: Icon(Icons.share,color: Colors.white,), onPressed: () {}),
+              IconButton(icon: Icon(Icons.share,color: Colors.white,), onPressed: () {
+
+              }),
             ],
           ),
           drawer: size.deviceScreenType == DeviceScreenType.mobile
