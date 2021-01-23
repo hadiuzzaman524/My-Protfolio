@@ -27,9 +27,12 @@ class FreamWorkView extends StatelessWidget {
             ),
           )),
           Expanded(
-            child: Text(
-              title,
-              style: title2Style,
+            child: Center(
+              child: Text(
+                title,
+                style: title2Style,
+                overflow: TextOverflow.clip,
+              ),
             ),
           ),
         ],

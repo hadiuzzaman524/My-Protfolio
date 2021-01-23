@@ -36,6 +36,23 @@ Features
         playStoreLink:
             'https://play.google.com/store/apps/details?id=com.nested.etutor'),
     Project(
+        title: 'easyChat',
+        gitHubLink: 'https://github.com/hadiuzzaman524/chat_application',
+        appLogo: 'images/flutter.png',
+        description:
+            """This is a simple chat application. You can use it for chatting with your friends and family. For building this application I used the Flutter framework. The limitation of the application is I could not add a notification system and video audio calling. In the future, I will try to build it if I have the proper time.""",
+        technology: "Flutter",
+        playStoreLink: null),
+    Project(
+        title: 'curesDokan',
+        gitHubLink:
+            'https://github.com/hadiuzzaman524/CuresDokan_Ecommerce_Shop',
+        appLogo: 'images/flutter.png',
+        description:
+            """For my practice purpose, I build a simple e-commerce application curesDokan. You can add your product, modify your product, order any product, find the product using your favorite choice. You can also see your previous order. The limitation of the application is I could not add a payment gateway.""",
+        technology: 'Flutter',
+        playStoreLink: null),
+    Project(
         title: 'Weekly Expense List',
         gitHubLink: 'https://github.com/hadiuzzaman524/Weekly-Expense-List',
         appLogo: 'images/flutter.png',
@@ -66,6 +83,14 @@ Features
         description:
             """It's a very simple calculator application. In this application you can calculate simple math problem like addition, subtraction, multiplication, division. Also calculate simple scientific calculation when you need value of trigonometic. Here also included age calculator.Using this application you can easily calculate your age with your birthday.""",
         technology: "Android",
+        playStoreLink: null),
+    Project(
+        title: 'e-Tutor',
+        gitHubLink: 'https://github.com/hadiuzzaman524/eTutor-soft',
+        appLogo: 'images/java64x64.png',
+        description:
+            """This is a simple project for finding a teacher nearest to you. In this project, I build it depends on the MySQL database. when a teacher registered for getting tuition his/her information store in the database. when a student can find the teacher then retrieve the information and showing it to get a private tutor. Using this desktop software you can easily saw video tutorials and read books on the internet.""",
+        technology: 'JavaFx',
         playStoreLink: null),
     Project(
         title: 'A text editor',

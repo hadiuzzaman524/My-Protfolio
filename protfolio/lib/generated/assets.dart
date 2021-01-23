@@ -9,6 +9,7 @@ class Assets {
   static const String imagesAndroidstudio = 'images/androidstudio.png';
   static const String imagesBaust64 = 'images/baust64.png';
   static const String imagesBaust80x80 = 'images/baust80x80.png';
+  static const String imagesBussh = 'images/bussh.png';
   static const String imagesBusshr = 'images/busshr.png';
   static const String imagesCall = 'images/call.png';
   static const String imagesCl64x64 = 'images/cl64x64.png';
@@ -33,7 +34,9 @@ class Assets {
   static const String imagesGmail = 'images/gmail.png';
   static const String imagesHtml64x64 = 'images/html64x64.png';
   static const String imagesJava64x64 = 'images/java64x64.png';
+  static const String imagesJupyter = 'images/jupyter.png';
   static const String imagesLinkedin = 'images/linkedin.png';
+  static const String imagesNetbeans = 'images/netbeans.png';
   static const String imagesPhp64x64 = 'images/php64x64.png';
   static const String imagesPlay = 'images/play.png';
   static const String imagesPlaystore24 = 'images/playstore24.png';
@@ -44,6 +47,7 @@ class Assets {
   static const String imagesSql = 'images/sql.png';
   static const String imagesTelephone = 'images/telephone.png';
   static const String imagesTexstudio = 'images/texstudio.jpg';
+  static const String imagesTextfilesLaTeXSourceDocument51264x64 = 'images/TextfilesLaTeXSourceDocument51264x64.png';
   static const String imagesTwitter = 'images/twitter.png';
   static const String imagesWdp = 'images/wdp.png';
   static const String imagesWord = 'images/word.jpg';

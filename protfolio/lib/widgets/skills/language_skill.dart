@@ -33,6 +33,14 @@ class LanguageSkill extends StatelessWidget {
             src: 'images/java64x64.png',
           ),
           FreamWorkView(
+            title: 'Dart',
+            src: 'images/dart64x64.png',
+          ),
+          FreamWorkView(
+            title: 'Python',
+            src: 'images/python64x64.png',
+          ),
+          FreamWorkView(
             title: 'HTML',
             src: 'images/html64x64.png',
           ),
@@ -45,12 +53,8 @@ class LanguageSkill extends StatelessWidget {
             src: 'images/php64x64.png',
           ),
           FreamWorkView(
-            title: 'Python',
-            src: 'images/python64x64.png',
-          ),
-          FreamWorkView(
-            title: 'Dart',
-            src: 'images/dart64x64.png',
+            title: 'LaTeX',
+            src: 'images/TextfilesLaTeXSourceDocument51264x64.png',
           ),
         ],
       );

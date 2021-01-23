@@ -22,44 +22,61 @@ class NavigationChild extends StatelessWidget {
     return SingleChildScrollView(
       child: Container(
         color: Theme.of(context).accentColor,
-        child: Column(
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.end,
+         // mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SizedBox(
-              height: 40,
+            Expanded(
+              child: Column(
+                children: [
+                  SizedBox(
+                    height: 40,
+                  ),
+                  CircleAvatar(
+                    radius: 80,
+                    backgroundImage: AssetImage('images/prof.JPG'),
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Text(
+                    'Md Hadiuzzaman',
+                    style: titleStyle,
+                  ),
+                  Text(
+                    'Mobile Application Developer & Problem Solver',
+                    style: normalTextStyle,
+                  ),
+                  SizedBox(
+                    height: 30,
+                  ),
+                  MenuButtonItem(
+                    name: 'About Me',
+                    onclick: aboutme,
+                  ),
+                  MenuButtonItem(
+                    name: 'Educations',
+                    onclick: education,
+                  ),
+                  MenuButtonItem(name: 'Skill Set', onclick: skills),
+                  MenuButtonItem(name: 'Projects', onclick: project),
+                  MenuButtonItem(name: 'Contacts', onclick: contact),
+                  SizedBox(
+                    height: 40,
+                  ),
+                  SocialMediaArea(),
+                ],
+              ),
             ),
-            CircleAvatar(
-              radius: 80,
-              backgroundImage: AssetImage('images/prof.JPG'),
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            Text(
-              'Md Hadiuzzaman',
-              style: titleStyle,
-            ),
-            Text(
-              'Mobile Application Developer & Problem Solver',
-              style:normalTextStyle,
-            ),
-            SizedBox(
-              height: 30,
-            ),
-            MenuButtonItem(
-              name: 'About Me',
-              onclick: aboutme,
-            ),
-            MenuButtonItem(
-              name: 'Educations',
-              onclick: education,
-            ),
-            MenuButtonItem(name: 'Skill Set', onclick: skills),
-            MenuButtonItem(name: 'Projects', onclick: project),
-            MenuButtonItem(name: 'Contacts', onclick: contact),
-            SizedBox(
-              height: 40,
-            ),
-            SocialMediaArea(),
+            Column(
+              children: [
+                Container(
+                  height: MediaQuery.of(context).size.height,
+                  width: 1,
+                  color: Theme.of(context).primaryColor,
+                ),
+              ],
+            )
           ],
         ),
       ),

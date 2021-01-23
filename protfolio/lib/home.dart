@@ -55,12 +55,7 @@ class _HomePageState extends State<HomePage> {
         return Scaffold(
           appBar: AppBar(
             backgroundColor: Theme.of(context).primaryColor,
-            elevation: 2,
-            actions: [
-              IconButton(icon: Icon(Icons.share,color: Colors.white,), onPressed: () {
-
-              }),
-            ],
+            elevation: 7,
           ),
           drawer: size.deviceScreenType == DeviceScreenType.mobile
               ? OpenDrawer(

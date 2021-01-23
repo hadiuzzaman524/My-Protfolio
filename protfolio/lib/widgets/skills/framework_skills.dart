@@ -32,6 +32,10 @@ class FrameWorkSkills extends StatelessWidget {
             title: 'Word Press',
             src: 'images/wdp.png',
           ),
+          FreamWorkView(
+            title: 'JavaFX',
+            src: 'images/java64x64.png',
+          ),
         ],
       );
     });

@@ -89,7 +89,7 @@ class ProjectTopBar extends StatelessWidget {
                             .catchError((error) => print(error));
                       }),
                 SizedBox(
-                  width: gitHubLink == null ? 42 : 10,
+                  width: gitHubLink == null ? 28 : 10,
                 ),
               ],
             ),

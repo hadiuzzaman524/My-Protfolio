@@ -22,6 +22,22 @@ class ToolsAndTechnology extends StatelessWidget {
         childAspectRatio: 4 / 2,
         children: [
           FreamWorkView(
+            title: 'MS Word',
+            src: 'images/word.jpg',
+          ),
+          FreamWorkView(
+            title: 'MS PowerPoint',
+            src: 'images/powerpoint.jpg',
+          ),
+          FreamWorkView(
+            title: 'Git',
+            src: 'images/gith.png',
+          ),
+          FreamWorkView(
+            title: 'Adobe XD',
+            src: 'images/xd.png',
+          ),
+          FreamWorkView(
             title: 'CodeBlocks',
             src: 'images/codeblocks.png',
           ),
@@ -38,20 +54,12 @@ class ToolsAndTechnology extends StatelessWidget {
             src: 'images/texstudio.jpg',
           ),
           FreamWorkView(
-            title: 'Adobe XD',
-            src: 'images/xd.png',
+            title: 'NetBeans',
+            src: 'images/netbeans.png',
           ),
           FreamWorkView(
-            title: 'Git',
-            src: 'images/gith.png',
-          ),
-          FreamWorkView(
-            title: 'MS Word',
-            src: 'images/word.jpg',
-          ),
-          FreamWorkView(
-            title: 'MS PowerPoint',
-            src: 'images/powerpoint.jpg',
+            title: 'Jupyter Notebook',
+            src: 'images/jupyter.png',
           ),
         ],
       );
