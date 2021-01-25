@@ -13,8 +13,12 @@ class DatabaseInfo extends StatelessWidget {
   Widget build(BuildContext context) {
     return ResponsiveBuilder(builder: (context, size) {
       return GridView.count(
-        crossAxisCount:
-        size.deviceScreenType != DeviceScreenType.desktop ? 2 : 3,
+        crossAxisCount: size.deviceScreenType == DeviceScreenType.desktop
+            ? 3
+            : size.deviceScreenType == DeviceScreenType.tablet
+            ? 2
+            : 1,
+        physics: NeverScrollableScrollPhysics(),
         shrinkWrap: true,
         mainAxisSpacing: 6,
         crossAxisSpacing: 6,

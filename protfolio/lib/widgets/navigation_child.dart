@@ -21,7 +21,7 @@ class NavigationChild extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Container(
-        color: Theme.of(context).accentColor,
+        color:Theme.of(context).accentColor,
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.end,
          // mainAxisAlignment: MainAxisAlignment.center,
@@ -34,7 +34,7 @@ class NavigationChild extends StatelessWidget {
                   ),
                   CircleAvatar(
                     radius: 80,
-                    backgroundImage: AssetImage('images/prof.JPG'),
+                    backgroundImage: AssetImage('images/meup.jpg'),
                   ),
                   SizedBox(
                     height: 20,
@@ -45,7 +45,9 @@ class NavigationChild extends StatelessWidget {
                   ),
                   Text(
                     'Mobile Application Developer & Problem Solver',
-                    style: normalTextStyle,
+                    style: TextStyle(
+                      fontStyle: FontStyle.italic,
+                    ),
                   ),
                   SizedBox(
                     height: 30,
@@ -65,6 +67,10 @@ class NavigationChild extends StatelessWidget {
                     height: 40,
                   ),
                   SocialMediaArea(),
+                  SizedBox(
+                    height: 40,
+                  ),
+
                 ],
               ),
             ),
@@ -73,8 +79,9 @@ class NavigationChild extends StatelessWidget {
                 Container(
                   height: MediaQuery.of(context).size.height,
                   width: 1,
-                  color: Theme.of(context).primaryColor,
+                  color: Colors.grey,
                 ),
+
               ],
             )
           ],

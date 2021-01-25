@@ -11,7 +11,7 @@ class Educations extends StatelessWidget {
       builder: (context, size) {
         return GridView.count(
           childAspectRatio:
-              size.deviceScreenType == DeviceScreenType.desktop ? 5 / 3 : 4 / 2,
+              size.deviceScreenType == DeviceScreenType.desktop ? 5 / 3 : size.deviceScreenType == DeviceScreenType.mobile ?4/3:4 / 2,
           shrinkWrap: true,
           mainAxisSpacing: 6,
           crossAxisSpacing: 6,

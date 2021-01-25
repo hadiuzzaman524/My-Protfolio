@@ -3,7 +3,6 @@ import 'package:responsive_builder/responsive_builder.dart';
 
 import '../freamwork_view.dart';
 
-
 class FrameWorkSkills extends StatelessWidget {
   const FrameWorkSkills({
     Key key,
@@ -13,8 +12,12 @@ class FrameWorkSkills extends StatelessWidget {
   Widget build(BuildContext context) {
     return ResponsiveBuilder(builder: (context, size) {
       return GridView.count(
-        crossAxisCount:
-        size.deviceScreenType != DeviceScreenType.desktop ? 2 : 3,
+        crossAxisCount: size.deviceScreenType == DeviceScreenType.desktop
+            ? 3
+            : size.deviceScreenType == DeviceScreenType.tablet
+                ? 2
+                : 1,
+        physics: NeverScrollableScrollPhysics(),
         shrinkWrap: true,
         mainAxisSpacing: 6,
         crossAxisSpacing: 6,

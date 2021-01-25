@@ -23,7 +23,7 @@ class InformationContainer extends StatelessWidget {
       child: Column(
         children: [
           Container(
-            padding: EdgeInsets.symmetric(horizontal: 20),
+            padding: EdgeInsets.symmetric(horizontal: 20,vertical: 10),
             height: 55,
             color: Colors.white,
             width: MediaQuery.of(context).size.width,

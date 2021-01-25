@@ -36,13 +36,13 @@ class Assets {
   static const String imagesJava64x64 = 'images/java64x64.png';
   static const String imagesJupyter = 'images/jupyter.png';
   static const String imagesLinkedin = 'images/linkedin.png';
+  static const String imagesMeup = 'images/meup.jpg';
   static const String imagesNetbeans = 'images/netbeans.png';
   static const String imagesPhp64x64 = 'images/php64x64.png';
   static const String imagesPlay = 'images/play.png';
   static const String imagesPlaystore24 = 'images/playstore24.png';
   static const String imagesPowerpoint = 'images/powerpoint.jpg';
   static const String imagesProblemsolving = 'images/problemsolving.png';
-  static const String imagesProf = 'images/prof.JPG';
   static const String imagesPython64x64 = 'images/python64x64.png';
   static const String imagesSql = 'images/sql.png';
   static const String imagesTelephone = 'images/telephone.png';

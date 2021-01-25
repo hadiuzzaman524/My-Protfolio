@@ -17,7 +17,8 @@ class Projects extends StatelessWidget {
           shrinkWrap: true,
           crossAxisCount:
               size.deviceScreenType != DeviceScreenType.desktop ? 1 : 2,
-          childAspectRatio: 4 / 2,
+          childAspectRatio:
+              size.deviceScreenType == DeviceScreenType.mobile ? 4 / 3 : 4 / 2,
           children: [
             for (int i = 0; i < item.length; i++)
               ProjectCard(

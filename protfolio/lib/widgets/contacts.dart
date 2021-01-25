@@ -29,42 +29,42 @@ class Contacts extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-        child: Column(
-      children: [
-        SizedBox(
-          height: 80,
-        ),
-        Container(
-          margin: EdgeInsets.only(left: 100, right: 100),
-          child: Parallelogram(
-            cutLength: 15.0,
-            edge: Edge.RIGHT,
-            child: Container(
-              color: Theme.of(context).primaryColor,
-              // width: 200.0,
-              child: Center(
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Text(
-                    'Contact With Me'.toUpperCase(),
-                    style: TextStyle(
-                      fontSize: 25,
-                      fontWeight: FontWeight.w600,
-                      color: Colors.white,
+    return ResponsiveBuilder(builder: (context, size) {
+      return Container(
+          child: Column(
+        children: [
+          if(size.deviceScreenType!=DeviceScreenType.mobile)SizedBox(
+            height:80,
+          ),
+          if(size.deviceScreenType!=DeviceScreenType.mobile)Container(
+            margin: EdgeInsets.only(left: 100, right: 100),
+            child: Parallelogram(
+              cutLength: 15.0,
+              edge: Edge.RIGHT,
+              child: Container(
+                color: Theme.of(context).primaryColor,
+                // width: 200.0,
+                child: Center(
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(
+                      'Contact With Me'.toUpperCase(),
+                      style: TextStyle(
+                        fontSize: 25,
+                        fontWeight: FontWeight.w600,
+                        color: Colors.white,
+                      ),
                     ),
                   ),
                 ),
               ),
             ),
           ),
-        ),
-        SizedBox(
-          height: 100,
-        ),
-        Expanded(
-          child: ResponsiveBuilder(builder: (context, size) {
-            return Container(
+          if(size.deviceScreenType!=DeviceScreenType.mobile)SizedBox(
+            height: 100,
+          ),
+          Expanded(
+            child: Container(
               margin: size.deviceScreenType == DeviceScreenType.desktop
                   ? EdgeInsets.only(left: 40, right: 40)
                   : null,
@@ -179,10 +179,10 @@ class Contacts extends StatelessWidget {
                   ),
                 ],
               ),
-            );
-          }),
-        ),
-      ],
-    ));
+            ),
+          ),
+        ],
+      ));
+    });
   }
 }

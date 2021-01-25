@@ -9,7 +9,7 @@ class AboutMe extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Container(
-        margin: EdgeInsets.only(left: 40, right: 40),
+        margin: EdgeInsets.only(left: 20, right: 20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -18,7 +18,7 @@ class AboutMe extends StatelessWidget {
             ),
             CircleAvatar(
               radius: 110,
-              backgroundImage: AssetImage('images/prof.JPG'),
+              backgroundImage: AssetImage('images/meup.jpg'),
             ),
             SizedBox(
               height: 10,
@@ -37,7 +37,9 @@ class AboutMe extends StatelessWidget {
             Row(
               children: [
                 Image.asset('images/baust64.png'),
-                SizedBox(width: 5,),
+                SizedBox(
+                  width: 5,
+                ),
                 Expanded(
                   child: Text(
                     'Student at Bangladesh Army University of Science and Technology.\nNilphamari, Saidpur.',
@@ -72,7 +74,7 @@ class AboutMe extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 5,
+              height: 10,
             ),
             Text(
               'To work in various national and international software firms or tech giants companies in the world, and grow rapidly with increasing responsibility. ',

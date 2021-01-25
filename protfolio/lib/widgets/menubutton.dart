@@ -16,7 +16,7 @@ class MenuButtonItem extends StatelessWidget {
         margin: EdgeInsets.symmetric(
             vertical: 8,
             horizontal:
-                size.deviceScreenType == DeviceScreenType.tablet ? 20 : 45),
+                size.deviceScreenType != DeviceScreenType.desktop ? 20 : 45),
         child: FlatButton(
           onPressed: onclick,
           child: Container(
