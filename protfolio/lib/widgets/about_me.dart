@@ -56,22 +56,8 @@ class AboutMe extends StatelessWidget {
             SizedBox(
               height: 50,
             ),
-            Diagonal(
-              clipHeight: 20.0,
-              axis: Axis.vertical,
-              position: DiagonalPosition.TOP_RIGHT,
-              child: Container(
-                color: Theme.of(context).primaryColor,
-                width: 120,
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Text(
-                    'My Goal: ',
-                    style: projectTitle,
-                    textAlign: TextAlign.left,
-                  ),
-                ),
-              ),
+            TitleDesign(
+              title: "My Goal",
             ),
             SizedBox(
               height: 10,
@@ -82,9 +68,110 @@ class AboutMe extends StatelessWidget {
               textAlign: TextAlign.justify,
             ),
             SizedBox(
+              height: 50,
+            ),
+            TitleDesign(
+              title: "Achievement",
+            ),
+            SizedBox(
               height: 10,
             ),
+            Text(
+              "1. Semister wise tuition fee Waiver and Scholarship:",
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.normal,
+              ),
+            ),
+            Text(
+              "   Got 1st Place in Fall-2018",
+              style: normalTextStyle,
+              textAlign: TextAlign.justify,
+            ),
+            Text(
+              "   Got 1st Place in Fall-2018",
+              style: normalTextStyle,
+              textAlign: TextAlign.justify,
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Text(
+              "2. Board Scholarship for Secondary School Certificate:",
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.normal,
+              ),
+            ),
+            Text(
+              "   Got 45th Place in Dinajpur Board, 2015",
+              style: normalTextStyle,
+              textAlign: TextAlign.justify,
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Text(
+              "3. Attend On ACM ICPC Preliminary Round:",
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.normal,
+              ),
+            ),
+            Text(
+              "   Team name: BAUST_CodeX, 2019",
+              style: normalTextStyle,
+              textAlign: TextAlign.justify,
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Text(
+              "4. Attend On Intra University Contest:",
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.normal,
+              ),
+            ),
+            Text(
+              "   Got 2nd Place in Team Forming Contest, 2019",
+              style: normalTextStyle,
+              textAlign: TextAlign.justify,
+            ),
+            SizedBox(
+              height: 100,
+            ),
           ],
+        ),
+      ),
+    );
+  }
+}
+
+class TitleDesign extends StatelessWidget {
+  final String title;
+
+  const TitleDesign({
+    @required this.title,
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Diagonal(
+      clipHeight: 20.0,
+      axis: Axis.vertical,
+      position: DiagonalPosition.TOP_RIGHT,
+      child: Container(
+        color: Theme.of(context).primaryColor,
+        width: 160,
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Text(
+            '${title} : ',
+            style: projectTitle,
+            textAlign: TextAlign.left,
+          ),
         ),
       ),
     );
