@@ -9,7 +9,7 @@ const titleStyle = TextStyle(
   fontSize: 25,
   fontWeight: FontWeight.bold,
   color: Colors.black,
-  fontStyle: FontStyle.italic,
+
 );
 const title2Style = TextStyle(
   color: Colors.black,

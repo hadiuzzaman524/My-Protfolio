@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:protfolio/constants.dart';
+import 'package:protfolio/widgets/aboutMe2.dart';
 import 'package:protfolio/widgets/header_style.dart';
 import 'about_me.dart';
 import 'skills.dart';
@@ -23,7 +24,7 @@ class InformationContainer extends StatelessWidget {
       child: Column(
         children: [
           Container(
-            padding: EdgeInsets.symmetric(horizontal: 20,vertical: 10),
+            padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
             height: 55,
             color: Colors.white,
             width: MediaQuery.of(context).size.width,
@@ -44,7 +45,7 @@ class InformationContainer extends StatelessWidget {
                 height: MediaQuery.of(context).size.height - (55 + 64),
                 width: MediaQuery.of(context).size.width,
                 child: temp.contains('About Me')
-                    ? AboutMe()
+                    ? AboutMyself()
                     : temp.contains('Educations')
                         ? Educations()
                         : temp.contains('Skill Set')
@@ -53,7 +54,7 @@ class InformationContainer extends StatelessWidget {
                                 ? Projects()
                                 : temp.contains('Contact')
                                     ? Contacts()
-                                    : AboutMe(), //default design
+                                    : AboutMyself(), //default design
               ),
             )
           else
@@ -62,7 +63,7 @@ class InformationContainer extends StatelessWidget {
                 color: Colors.white,
                 height: MediaQuery.of(context).size.height - (55 + 64),
                 width: MediaQuery.of(context).size.width,
-                child: AboutMe(),
+                child: AboutMyself(),
               ),
             ),
           // default design
