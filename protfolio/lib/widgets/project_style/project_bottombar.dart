@@ -1,6 +1,8 @@
 import 'package:clippy_flutter/diagonal.dart';
 import 'package:flutter/material.dart';
 
+import '../../constants.dart';
+
 class ProjectBottomBar extends StatelessWidget {
   final String language;
 
@@ -20,7 +22,13 @@ class ProjectBottomBar extends StatelessWidget {
             axis: Axis.vertical,
             position: DiagonalPosition.BOTTOM_LEFT,
             child: Container(
-              color: Theme.of(context).primaryColor,
+             decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  colors: [color3,Theme.of(context).primaryColor],
+                  begin: Alignment.centerLeft,
+                  end: Alignment.centerRight,
+                ),
+              ),
               width: 150,
               height: MediaQuery.of(context).size.height,
               child: Center(

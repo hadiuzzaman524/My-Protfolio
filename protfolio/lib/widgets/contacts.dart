@@ -42,8 +42,9 @@ class Contacts extends StatelessWidget {
               cutLength: 15.0,
               edge: Edge.RIGHT,
               child: Container(
-                color: Theme.of(context).primaryColor,
+              //  color: Theme.of(context).primaryColor,
                 // width: 200.0,
+                decoration: headerDecoration,
                 child: Center(
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),

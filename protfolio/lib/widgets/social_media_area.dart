@@ -28,13 +28,17 @@ class SocialMediaArea extends StatelessWidget {
                 margin: EdgeInsets.only(left: 45),
                 height: 2,
                 width: 200,
-                color: Theme.of(context).primaryColor,
+                color: Colors.orangeAccent//Theme.of(context).primaryColor,
               ),
             ),
             Flexible(
               child: Text(
                 'Follow Me On',
-                style: normalTextStyle,
+                style: TextStyle(
+                  color: Theme.of(context).primaryColor,
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
             Flexible(
@@ -42,7 +46,7 @@ class SocialMediaArea extends StatelessWidget {
                 margin: EdgeInsets.only(right: 45),
                 height: 2,
                 width: 200,
-                color: Theme.of(context).primaryColor,
+                color:Colors.orangeAccent //Theme.of(context).primaryColor,
               ),
             ),
           ],

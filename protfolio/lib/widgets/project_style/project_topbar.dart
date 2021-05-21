@@ -55,7 +55,8 @@ class ProjectTopBar extends StatelessWidget {
               axis: Axis.vertical,
               position: DiagonalPosition.TOP_RIGHT,
               child: Container(
-                color: Theme.of(context).primaryColor,
+                //color: Theme.of(context).primaryColor,
+                decoration: projectDecoration,
                 width: 220,
                 child: Center(
                   child: Text(

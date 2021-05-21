@@ -2,6 +2,8 @@ import 'package:clippy_flutter/diagonal.dart';
 import 'package:flutter/animation.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:hovering/hovering.dart';
+import 'package:protfolio/constants.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 class Educations extends StatelessWidget {
@@ -90,108 +92,140 @@ class EducationCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      elevation: 7,
-      margin: EdgeInsets.all(10),
-      color: Theme.of(context).accentColor,
-      child: Column(
-        children: [
-          Expanded(
-            child: Container(
-              child: Row(
-                children: [
-                  Expanded(
-                    flex: 1,
-                    child: Container(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          SizedBox(
-                            height: 20,
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(left: 10,right: 10),
-                            child: Image.asset(imageUrl),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  Expanded(
-                    flex: 5,
-                    child: SingleChildScrollView(
+    return HoverAnimatedContainer(
+      hoverColor: hoverColor,
+      child: Card(
+        elevation: 7,
+        margin: EdgeInsets.all(10),
+        color: Theme.of(context).accentColor,
+        child: Column(
+          children: [
+            Expanded(
+              child: Container(
+                child: Row(
+                  children: [
+                    Expanded(
+                      flex: 1,
                       child: Container(
                         child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.start,
                           children: [
-                            Text(
-                              title,
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 21,
-                                color: Colors.black,
-                              ),
-                            ),
                             SizedBox(
-                              height: 10,
+                              height: 20,
                             ),
-                            Text(
-                              institute,
-                              style: TextStyle(
-                                fontWeight: FontWeight.w500,
-                                fontSize: 18,
-                                fontStyle: FontStyle.italic,
-                                color: Colors.black,
-                              ),
+                            Padding(
+                              padding: const EdgeInsets.only(left: 10,right: 10),
+                              child: Image.asset(imageUrl),
                             ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Text(
-                              'Passing Year:  $passingYear',
-                              style: TextStyle(
-                                fontWeight: FontWeight.w500,
-                                fontSize: 17,
-                                fontStyle: FontStyle.italic,
-                                color: Colors.black,
-                              ),
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            isUniversity
-                                ? Text(
-                                    'C.G.P.A:  $gpa',
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.w500,
-                                      fontSize: 17,
-                                      fontStyle: FontStyle.italic,
-                                      color: Colors.black,
-                                    ),
-                                  )
-                                : Text(
-                                    'G.P.A:  $gpa',
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.w500,
-                                      fontSize: 17,
-                                      color: Colors.black,
-                                      fontStyle: FontStyle.italic,
-                                    ),
-                                  ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            board != null
-                                ? Text(
-                                    'Board:  $board',
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.w500,
-                                      fontSize: 17,
-                                      color: Colors.black,
-                                    ),
-                                  )
-                                : Text(''),
                           ],
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                      flex: 5,
+                      child: SingleChildScrollView(
+                        child: Container(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                title,
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 21,
+                                  color: Colors.black,
+                                ),
+                              ),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              Text(
+                                institute,
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: 18,
+                                  fontStyle: FontStyle.italic,
+                                  color: Colors.black,
+                                ),
+                              ),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              Text(
+                                'Passing Year:  $passingYear',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: 17,
+                                  fontStyle: FontStyle.italic,
+                                  color: Colors.black,
+                                ),
+                              ),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              isUniversity
+                                  ? Text(
+                                      'C.G.P.A:  $gpa',
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.w500,
+                                        fontSize: 17,
+                                        fontStyle: FontStyle.italic,
+                                        color: Colors.black,
+                                      ),
+                                    )
+                                  : Text(
+                                      'G.P.A:  $gpa',
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.w500,
+                                        fontSize: 17,
+                                        color: Colors.black,
+                                        fontStyle: FontStyle.italic,
+                                      ),
+                                    ),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              board != null
+                                  ? Text(
+                                      'Board:  $board',
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.w500,
+                                        fontSize: 17,
+                                        color: Colors.black,
+                                      ),
+                                    )
+                                  : Text(''),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Container(
+              height: 40,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Diagonal(
+                    clipHeight: 20.0,
+                    axis: Axis.vertical,
+                    position: DiagonalPosition.BOTTOM_LEFT,
+                    child: Container(
+                     // color: Theme.of(context).primaryColor,
+                      decoration: projectDecoration,
+                      width: 80,
+                      height: MediaQuery.of(context).size.height,
+                      child: Center(
+                        child: Text(
+                          shortFromofDegree,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
                       ),
                     ),
@@ -199,36 +233,8 @@ class EducationCard extends StatelessWidget {
                 ],
               ),
             ),
-          ),
-          Container(
-            height: 40,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                Diagonal(
-                  clipHeight: 20.0,
-                  axis: Axis.vertical,
-                  position: DiagonalPosition.BOTTOM_LEFT,
-                  child: Container(
-                    color: Theme.of(context).primaryColor,
-                    width: 80,
-                    height: MediaQuery.of(context).size.height,
-                    child: Center(
-                      child: Text(
-                        shortFromofDegree,
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

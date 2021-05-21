@@ -1,6 +1,8 @@
 import 'package:animated_background/animated_background.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
+import 'dart:convert';
+import 'dart:html' as html;
 
 class AboutMyself extends StatefulWidget {
   @override
@@ -9,6 +11,12 @@ class AboutMyself extends StatefulWidget {
 
 class _AboutMyselfState extends State<AboutMyself>
     with TickerProviderStateMixin {
+
+  void downloadFile(String url){
+    html.AnchorElement anchorElement =  new html.AnchorElement(href: url);
+    anchorElement.download = url;
+    anchorElement.click();
+  }
   @override
   Widget build(BuildContext context) {
     return ResponsiveBuilder(builder: (ctx, size) {
@@ -69,7 +77,10 @@ class _AboutMyselfState extends State<AboutMyself>
                       margin: EdgeInsets.only(top: 9),
                       // ignore: deprecated_member_use
                       child: RaisedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          //https://drive.google.com/uc?export=download&id=1-TD4UXIfhKlC30brcQn1whOMAkRPu6Ui
+                          downloadFile("https://drive.google.com/uc?export=download&id=1-TD4UXIfhKlC30brcQn1whOMAkRPu6Ui");
+                        },
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(80.0)),
                         padding: EdgeInsets.all(0.0),
@@ -96,7 +107,7 @@ class _AboutMyselfState extends State<AboutMyself>
                     )
                   ],
                 ),
-                Image.asset("images/meup.jpg")
+                Image.asset("images/hadiuzzaman.png",fit: BoxFit.cover,)
               ],
             )),
       );

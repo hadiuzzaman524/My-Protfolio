@@ -42,7 +42,8 @@ class _NavigationChildState extends State<NavigationChild> {
                     ),
                     CircleAvatar(
                       radius: 80,
-                      backgroundImage: AssetImage('images/meup.jpg'),
+                      backgroundColor: Colors.orangeAccent,
+                      backgroundImage: AssetImage('images/hadiuzzaman.png'),
                     ),
                     SizedBox(
                       height: 20,

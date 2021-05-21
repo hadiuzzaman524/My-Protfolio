@@ -23,6 +23,7 @@ class Assets {
   static const String imagesDownload = 'images/download.png';
   static const String imagesDs = 'images/ds.jpg';
   static const String imagesEmail = 'images/email.png';
+  static const String imagesEtutor = 'images/etutor.jpg';
   static const String imagesEtutor64x64 = 'images/etutor64x64.jpg';
   static const String imagesFacebook = 'images/facebook.png';
   static const String imagesFirebase64x64 = 'images/firebase64x64.png';
@@ -36,6 +37,7 @@ class Assets {
   static const String imagesJava64x64 = 'images/java64x64.png';
   static const String imagesJupyter = 'images/jupyter.png';
   static const String imagesLinkedin = 'images/linkedin.png';
+  static const String imagesMessmonitor = 'images/messmonitor.jpg';
   static const String imagesMeup = 'images/meup.jpg';
   static const String imagesNetbeans = 'images/netbeans.png';
   static const String imagesPhp64x64 = 'images/php64x64.png';
@@ -44,6 +46,7 @@ class Assets {
   static const String imagesPowerpoint = 'images/powerpoint.jpg';
   static const String imagesProblemsolving = 'images/problemsolving.png';
   static const String imagesPython64x64 = 'images/python64x64.png';
+  static const String imagesQb = 'images/qb.png';
   static const String imagesSql = 'images/sql.png';
   static const String imagesTelephone = 'images/telephone.png';
   static const String imagesTexstudio = 'images/texstudio.jpg';

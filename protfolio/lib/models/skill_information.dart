@@ -20,9 +20,23 @@ class Project {
 class SkillInformation {
   static List<Project> projectList = [
     Project(
+        title: "Mess Monitor",
+        gitHubLink: null,
+        appLogo: "images/messmonitor.jpg",
+        description: "It's a totally paper-free and hassle-free mess management solution. In the day-to-day life of students and bachelor people, they often find difficulty in managing their mess calculations at the end of a month. Using this application you can easily manage your mess without spending extra time or extra money. This application saves your valuable time and produces 100% accurate calculations. Using this app you can manage 'Daily Meal', 'Glossary Cost', 'Utilities Cost', 'Member Meal', 'Bazaar List', 'Members Money', and so on.",
+        technology: "Flutter",
+        playStoreLink: "https://play.google.com/store/apps/details?id=com.messmonitor"),
+    Project(
+        title: "Question Bank-BAUST",
+        gitHubLink: null,
+        appLogo: "images/qb.png",
+        description: "Here, you can find all departmental questions of BAUST. You can easily read the question in PDF format as your need. You can read questions in online and offline mode. For offline reading, you can need to download the question at once. Let's download the app and make your journey easier.",
+        technology: "Flutter",
+        playStoreLink: "https://play.google.com/store/apps/details?id=com.baust.baustquestionbank"),
+    Project(
         title: 'eTutor',
         gitHubLink: null,
-        appLogo: 'images/and.png',
+        appLogo: 'images/etutor.jpg',
         description:
             """This app is mainly for students and teachers who are seeking private tuition or interested to provide. Here, students can find suitable teachers with their expected salary and teachers can find students who are interested in private tuition.
 
