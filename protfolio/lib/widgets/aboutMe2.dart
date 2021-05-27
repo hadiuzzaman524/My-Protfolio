@@ -97,7 +97,7 @@ class _AboutMyselfState extends State<AboutMyself>
                             BoxConstraints(maxWidth: 200.0, minHeight: 40.0),
                             alignment: Alignment.center,
                             child: Text(
-                              "Download My CV",
+                              "Download Resume",
                               textAlign: TextAlign.center,
                               style: TextStyle(color: Colors.white, fontSize: 15),
                             ),
